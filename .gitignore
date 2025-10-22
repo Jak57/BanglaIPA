@@ -1,0 +1,5 @@
+__pycache__
+
+data/input/train/*.csv
+
+data/input/test/*.csv

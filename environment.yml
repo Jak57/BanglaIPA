@@ -1,0 +1,13 @@
+name: ipa_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pandas
+  - openai
+
+# cd test/s_test2
+# source ~/miniconda3/etc/profile.d/conda.sh
+# conda activate ipa_env
+# bash run.sh
