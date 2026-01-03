@@ -5,3 +5,9 @@ data/input/train/*.csv
 data/input/test/*.csv
 
 config.py
+
+environment.yml
+
+venv/
+
+run.sh
