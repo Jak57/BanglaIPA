@@ -3,7 +3,7 @@ import pandas as pd
 from config import PATH
 from utils import get_path
 
-def get_contextual_rewritten_text(text, model):
+def get_contextual_rewritten_text(text, model="openai/gpt-4.1-mini"):
     """
     Provides word forms of numerals.
     
