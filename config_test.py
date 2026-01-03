@@ -1,3 +1,5 @@
 PATH = {
-    "project_folder_path": "VAR_PROJECT_PATH",
+    "project_folder_path": "VAR",
+    "BASE_URL": "VAR",
+    "API_KEY": "VAR",
 }
