@@ -14,8 +14,8 @@ def get_text2ipa(text, model):
     """
     print(text, model)
     client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key="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",
+        base_url=PATH['BASE_URL'],
+        api_key=PATH['API_KEY'],
     )
 
     completion = client.chat.completions.create(
