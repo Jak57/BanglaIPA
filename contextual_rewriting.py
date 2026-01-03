@@ -21,7 +21,6 @@ def get_contextual_rewritten_passage(passage):
             text_with_context.append(get_contextual_rewritten_text(text))
         else:
             text_with_context.append(text)
-    # passage_rewritten = ("। ".join(text_with_context)).strip() + "।"
     return " ".join(text_with_context)
 
 if __name__ == "__main__":
@@ -29,3 +28,4 @@ if __name__ == "__main__":
     print(get_contextual_rewritten_passage(passage))
 
 ## python contextual_rewriting.py
+## output: "একটি বাছাই করুন: গণিত প্রথম/ গণিত দ্বিতীয় পত্র। স্নাতক বা সমমান শ্রেণিতে প্রথম বর্ষের শিক্ষার্থীদের ভর্তি সহায়তা দেবে অন্তর্বর্তী সরকার। শিক্ষার্থীদের আবেদন চলবে আগামীকাল, ত্রিশ ডিসেম্বর পর্যন্ত অনলাইনে।"
