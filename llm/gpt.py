@@ -3,7 +3,7 @@ import pandas as pd
 from config import PATH
 from utils import get_path
 
-def get_contextual_rewritten_text(text, model="openai/gpt-4.1-mini"):
+def get_contextual_rewritten_text(text, model="openai/gpt-4.1-nano"):
     """
     Provides word forms of numerals.
     
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     folder = PATH['project_folder_path'] + "/" + "data/input/test"
     paths = get_path(folder)
     print(f"Total files={len(paths)}")
-    model = "openai/gpt-4.1-mini"
+    model = "openai/gpt-4.1-nano"
     sum = 0
     for path in paths:
         df = pd.read_json(path)

@@ -24,18 +24,3 @@ def load_dataset_csv(path):
     """
     df = pd.read_csv(path)
     return df
-
-def is_number_present(text):
-    """
-    Checks whether Bengali digits are present or not.
-    
-    Args:
-        - text (str): Input text.
-    Returns:
-        - boolean: If digit is present return True, otherwise False
-    """
-    digits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"]
-    for ch in text:
-        if ch in digits:
-            return True
-    return False

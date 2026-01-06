@@ -1,6 +1,11 @@
 
+def get_bengali_character_set():
+    """
+    Returns Bengali character set.
+    """
+    return set([ 'ঁ', 'ং', 'ঃ', 'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 'জ', 'ঝ', 'ঞ', 'ট', 'ঠ', 'ড', 'ঢ', 'ণ', 'ত', 'থ', 'দ', 'ধ', 'ন', 'প', 'ফ', 'ব', 'ভ', 'ম', 'য', 'র', 'ল', 'শ', 'ষ', 'স', 'হ', '়', 'া', 'ি', 'ী', 'ু', 'ূ', 'ৃ', 'ে', 'ৈ', 'ো', 'ৌ', '্', 'ৎ', 'ৗ', 'ড়', 'ঢ়', 'য়'])
 
-def get_state_aligned_segments(word, character_set):
+def get_state_aligned_segments(word):
     """
     Split a word into subword segments and assign state.    
     
@@ -11,6 +16,7 @@ def get_state_aligned_segments(word, character_set):
     """
     i = 0
     n = len(word)
+    character_set = get_bengali_character_set()
     vocab = list(character_set)
     state = []
     tokens = []
@@ -31,12 +37,38 @@ def get_state_aligned_segments(word, character_set):
     return state, tokens
 
 if __name__ == "__main__":
-    character_set = set([ 'ঁ', 'ং', 'ঃ', 'অ', 'আ', 'ই', 'ঈ', 'উ', 'ঊ', 'ঋ', 'এ', 'ঐ', 'ও', 'ঔ', 'ক', 'খ', 'গ', 'ঘ', 'ঙ', 'চ', 'ছ', 'জ', 'ঝ', 'ঞ', 'ট', 'ঠ', 'ড', 'ঢ', 'ণ', 'ত', 'থ', 'দ', 'ধ', 'ন', 'প', 'ফ', 'ব', 'ভ', 'ম', 'য', 'র', 'ল', 'শ', 'ষ', 'স', 'হ', '়', 'া', 'ি', 'ী', 'ু', 'ূ', 'ৃ', 'ে', 'ৈ', 'ো', 'ৌ', '্', 'ৎ', 'ৗ', 'ড়', 'ঢ়', 'য়'])
     text = "একটি বাছাই করুন: গণিত প্রথম╱ গণিত দ্বিতীয় পত্র।"
     words = text.split(" ")
     print(words)
     for word in words:
-        state, tokens = get_state_aligned_segments(word, character_set)
+        state, tokens = get_state_aligned_segments(word)
         print(state)
         print(tokens)
         print()
+
+## python state_alignment.py
+# # Output:
+# ['একটি', 'বাছাই', 'করুন:', 'গণিত', 'প্রথম╱', 'গণিত', 'দ্বিতীয়', 'পত্র।']
+# [True]
+# ['একটি']
+
+# [True]
+# ['বাছাই']
+
+# [True, False]
+# ['করুন', ':']
+
+# [True]
+# ['গণিত']
+
+# [True, False]
+# ['প্রথম', '╱']
+
+# [True]
+# ['গণিত']
+
+# [True]
+# ['দ্বিতীয়']
+
+# [True, False]
+# ['পত্র', '।']

@@ -1,5 +1,19 @@
-from utils import is_number_present
 from llm.gpt import get_contextual_rewritten_text
+
+def is_number_present(text):
+    """
+    Checks whether Bengali digits are present or not.
+    
+    Args:
+        - text (str): Input text.
+    Returns:
+        - boolean: If digit is present return True, otherwise False
+    """
+    digits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"]
+    for ch in text:
+        if ch in digits:
+            return True
+    return False
 
 def get_contextual_rewritten_passage(passage):
     """
