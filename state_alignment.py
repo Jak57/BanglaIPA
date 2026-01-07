@@ -47,7 +47,6 @@ if __name__ == "__main__":
         print()
 
 ## python state_alignment.py
-
 # # Output:
 # ['একটি', 'বাছাই', 'করুন:', 'গণিত', 'প্রথম╱', 'গণিত', 'দ্বিতীয়', 'পত্র।']
 # [True]
