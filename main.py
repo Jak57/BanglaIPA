@@ -51,7 +51,6 @@ if __name__ == "__main__":
         ipas.append(DICTIONARY[word])
     print(f"IPA={" ".join(ipas)}")
 
-
 # python main.py
 
 # # Output:
