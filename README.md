@@ -4,4 +4,6 @@
 * ``Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass``
 * ``venv\Scripts\activate``
 * ``pip install -r requirements.txt``
+* Rename "config_test.py" to "config.py" and update values of variables.
+* ``python main.py``
 * ``deactivate``
